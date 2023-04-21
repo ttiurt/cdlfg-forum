@@ -2,29 +2,22 @@
 <link rel="stylesheet" href="/stylesheets/style.css" />
 <%- include('../partials/nav') %>
 
-<main>
+<section>
   <h1>POSTS</h1>
-  <table id="list">
-    <thead>
-      <tr>
-        <th>CURRENTLY LOOKING</th>
-        <th>RANK</th>
-        <th>NEEDS</th>
-      </tr>
-    </thead>
-    <tbody>
+  <h2>CURRENTLY LOOKING</h2>
+    <body>
       <% posts.forEach((post) => { %>
-        <tr>
-          <td><%= post.title %></td>
-          <td><%= post.rank %></td>
-          <td><%= post.lookingFor %></td>
-          <% if (user) { %>
-            <td><a href="/posts/<%= post._id %>">DETAILS</a></td>
-          <% } %>
-        </tr>
+        <details>
+          <summary><%= post.title %></summary>
+          <p>-Currently <%= post.rank %></p>
+          <p>-Needs <%= post.lookingFor %> players</p>
+          <p>-They <%= post.mic ? 'have a mic' : `don't have a mic` %></p>
+          <p>-Their gamertag is "<%= post.gamertag %>"</p>
+          <p>Additional Comments: <%= post.moreInfo %></p>
+          <a href="/posts/<%= post._id %>">DETAILS</a>
+        </details>
       <% }) %>
-    </tbody>
-  </table>
-</main>
+    </body>
+</section>
 
 <%- include('../partials/footer') %>
