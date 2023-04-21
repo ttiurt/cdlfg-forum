@@ -12,6 +12,10 @@ form {
   font-size: 20px;
 }
 
+form > label {
+  margin-top: 15px;
+}
+
 form * {
   padding: 5px;
   border-radius: 5px;
@@ -25,4 +29,10 @@ form > button {
   align-content: center;
   width: 100px;
   font-size: 22px;
+  margin-top: 15px;
+}
+
+#mic-checkbox {
+  height: 25px;
+  width: 25px;
 }

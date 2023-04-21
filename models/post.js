@@ -8,6 +8,7 @@ const postSchema = new Schema({
   gamertag: { type: String, required: true },
   lookingFor: { type: Number, min: 1, max: 3, required: true },
   mic: { type: Boolean, required: true},
+  moreInfo: { type: String },
   player: { type: Schema.Types.ObjectId, ref: 'Profile' },
 }, {
   timestamps: true,

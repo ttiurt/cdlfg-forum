@@ -8,6 +8,8 @@
     <thead>
       <tr>
         <th>CURRENTLY LOOKING</th>
+        <th>RANK</th>
+        <th>NEEDS</th>
       </tr>
     </thead>
     <tbody>
@@ -15,7 +17,10 @@
         <tr>
           <td><%= post.title %></td>
           <td><%= post.rank %></td>
-          <td><a href="/posts/<%= post._id %>">DETAILS</a></td>
+          <td><%= post.lookingFor %></td>
+          <% if (user) { %>
+            <td><a href="/posts/<%= post._id %>">DETAILS</a></td>
+          <% } %>
         </tr>
       <% }) %>
     </tbody>

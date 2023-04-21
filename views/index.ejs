@@ -1,16 +1,13 @@
 <%- include('./partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/style.css">
 <%- include('./partials/nav') %>
 
 <main>
-  <h1>hello, <%= user ? user.profile.name : "friend" %></h1>
-  <% if (user?.profile.avatar) { %>
-    <div>
-      <img
-        src="<%= user.profile.avatar %>"
-        alt="<%= user.profile.name %> avatar"
-      />
-    </div>
-  <% } %>
+  <h1>CoD: MW2 RANKED PLAY LFG</h1>
+  <h2>BELOW ARE SOME RULES AND INFO FOR YOU</h2>
+  <p>!! FIRST PLEASE MAKE SURE YOU HAVE SIGNED IN WITH GOOGLE, IF YOU ARE NOT SIGNED IN YOU WILL NOT BE ABLE TO CREATE OR REPLY TO POSTS !!</p>
+  <p>!! SECOND MAKE SURE THE CREATE POST FORM IS FILLED OUT COMPLETELY MAKING SURE TO ADD YOUR ACTIVISION ID IN THE COMMENTS !!</p>
+  <p>!! IF YOU DO NOT KNOW HOW TO FIND YOUR ACTIVISION ID PLEASE VISIT <a href="https://afkgaming.com/esports/guide/how-to-find-your-activision-id-in-warzone-and-modern-warfare-2" target="_blank" rel="noopener noreferrer">THIS PAGE</a> !!</p>
 </main>
 
 <%- include('./partials/footer') %>

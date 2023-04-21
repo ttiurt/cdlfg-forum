@@ -21,6 +21,7 @@ function create(req,res){
 
 function index(req, res){
   Post.find({})
+  .populate('player')
   .then(posts => {
     console.log(posts)
     res.render('posts/index', {

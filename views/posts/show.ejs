@@ -4,10 +4,11 @@
 
 <section>
   <h1><%= post.title %></h1>
-  <h2>-Currently <%= post.rank %></h2>
-  <h2>-Needs <%= post.lookingFor %> players</h2>
-  <h2>-They <%= post.mic ? 'have a mic' : `don't have a mic` %></h2>
-  <h2>-Their gamertag is "<%= post.gamertag %>" (player will post Activision ID # in replies)</h2>
+  <p>-Currently <%= post.rank %></p>
+  <p>-Needs <%= post.lookingFor %> players</p>
+  <p>-They <%= post.mic ? 'have a mic' : `don't have a mic` %></p>
+  <p>-Their gamertag is "<%= post.gamertag %>" (player will post Activision ID # in comments)</p>
+  <p>Additional Comments: <%= post.moreInfo %></p>
 </section>
 
 <%- include('../partials/footer') %>
