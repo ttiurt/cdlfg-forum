@@ -1,0 +1,49 @@
+<%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/style.css" />
+<%- include('../partials/nav') %>
+
+<section>
+  <h1>EDIT POST</h1>
+  <form action="/posts/<%= post._id %>?_method=PUT" method="POST">
+    <label>
+      TITLE:
+      <input type="text" name="title" autocomplete="off" value="<%= post.title %>">
+    </label>
+    <label>
+      RANK:
+      <select name="rank" value="<%= post.rank %>">
+        <option value="BRONZE">BRONZE</option>
+        <option value="SILVER">SILVER</option>
+        <option value="GOLD">GOLD</option>
+        <option value="PLATINUM">PLATINUM</option>
+        <option value="DIAMOND">DIAMOND</option>
+        <option value="CRIMSON">CRIMSON</option>
+        <option value="IRIDESCENT">IRIDESCENT</option>
+        <option value="TOP 250">TOP 250</option>
+      </select>
+    </label>
+    <label>
+      GAMERTAG:
+      <input type="text" name="gamertag" value="<%= post.gamertag %>">
+    </label>
+    <label>
+      LOOKING FOR:
+      <select name="lookingFor" value="<%= post.lookingFor %>">
+        <option value='1' >1</option>
+        <option value='2' >2</option>
+        <option value='3' >3</option>
+      </select>
+    </label>
+    <label>
+      HAVE MIC:
+      <input type="checkbox" name="mic" <%= post.mic ? "checked" : "" %>>
+    </label>
+    <label>
+      ADDITIONAL COMMENTS:
+      <input type="text" name="moreInfo" value="<%= post.moreInfo %>">
+    </label>
+      <button type="submit">EDIT POST</button>
+  </form>
+</section>
+
+<%- include('../partials/footer') %>

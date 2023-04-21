@@ -9,6 +9,9 @@
   <p>-They <%= post.mic ? 'have a mic' : `don't have a mic` %></p>
   <p>-Their gamertag is "<%= post.gamertag %>" (player will post Activision ID # in comments)</p>
   <p>Additional Comments: <%= post.moreInfo %></p>
+  <% if (post.player.equals(user?.profile._id)) { %>
+    <a href="/posts/<%= post._id %>/edit"><button>EDIT POST</button></a>
+  <% } %>
 </section>
 
 <%- include('../partials/footer') %>

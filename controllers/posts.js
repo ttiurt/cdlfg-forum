@@ -7,11 +7,12 @@ function newPost(req, res){
 }
 
 function create(req,res){
+  req.body.player = req.user.profile._id
   req.body.mic = !!req.body.mic
   Post.create(req.body)
   console.log(req.body)
   .then(post => {
-    res.redirect(`/posts/${post._id}`)
+    res.redirect('/posts')
   })
   .catch(error => {
     console.log(error)
@@ -50,9 +51,24 @@ function show(req, res){
   })
 }
 
+function edit(req, res){
+  Post.findById(req.params.postId)
+  .then(post => {
+    res.render('posts/edit', {
+      post,
+      title: 'EDIT POST'
+    })
+  })
+  .catch(error => {
+    console.log(error)
+    res.redirect('/')
+  })
+}
+
 export {
   newPost as new,
   create,
   index,
   show,
+  edit,
 }
