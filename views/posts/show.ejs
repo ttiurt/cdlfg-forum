@@ -1,0 +1,13 @@
+<%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/style.css" />
+<%- include('../partials/nav') %>
+
+<section>
+  <h1><%= post.title %></h1>
+  <h2>-Currently <%= post.rank %></h2>
+  <h2>-Needs <%= post.lookingFor %> players</h2>
+  <h2>-They <%= post.mic ? 'have a mic' : `don't have a mic` %></h2>
+  <h2>-Their gamertag is "<%= post.gamertag %>" (player will post Activision ID # in replies)</h2>
+</section>
+
+<%- include('../partials/footer') %>

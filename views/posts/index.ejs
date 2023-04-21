@@ -1,0 +1,25 @@
+<%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/style.css" />
+<%- include('../partials/nav') %>
+
+<main>
+  <h1>POSTS</h1>
+  <table id="list">
+    <thead>
+      <tr>
+        <th>CURRENTLY LOOKING</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% posts.forEach((post) => { %>
+        <tr>
+          <td><%= post.title %></td>
+          <td><%= post.rank %></td>
+          <td><a href="/posts/<%= post._id %>">DETAILS</a></td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</main>
+
+<%- include('../partials/footer') %>
