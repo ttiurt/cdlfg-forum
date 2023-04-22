@@ -15,6 +15,29 @@
       <button type="submit">DELETE POST</button>
     </form>
   <% } %>
+  <h2>REPLIES</h2>
+  <ul>
+    <% post.comments?.forEach(comment => { %>
+      <li>
+        <%= comment.content %> - <%= comment.responder.name %>
+        <% if (comment.responder.equals(user?.profile._id)) { %>
+          <form action="/posts/<%= post._id %>/comments/<%= comment._id %>?_method=DELETE" method="POST">
+            <button type="submit">DELETE REPLY</button>
+          </form>
+          <a href="/posts/<%= post._id %>/comments/<%= comment._id %>/edit">
+            <button>EDIT REPLY</button>
+          </a>
+        <% } %>
+      </li>
+    <% }) %>
+  </ul>
+  <% if (user) { %>
+    <h3>Reply</h3>
+    <form action="/posts/<%= post._id %>/comments" method="POST">
+      <textarea name="content"></textarea><br>
+      <button>ADD REPLY</button>
+    </form>
+  <% } %>
 </section>
 
 <%- include('../partials/footer') %>

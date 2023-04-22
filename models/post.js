@@ -2,6 +2,11 @@ import mongoose from 'mongoose'
 
 const Schema = mongoose.Schema
 
+const commentSchema = new Schema({
+  content: String,
+  responder: { type: Schema.Types.ObjectId, re: "Profile"},
+})
+
 const postSchema = new Schema({ 
   title: { type: String, required: true },
   rank: { type: String, enum: ['BRONZE', 'SILVER', 'GOLD', 'PLATINUM', 'DIAMOND', 'CRIMSON', 'IRIDESCENT', 'TOP 250'], required: true },
@@ -10,6 +15,7 @@ const postSchema = new Schema({
   mic: { type: Boolean, required: true},
   moreInfo: { type: String },
   player: { type: Schema.Types.ObjectId, ref: 'Profile' },
+  comments: [commentSchema]
 }, {
   timestamps: true,
 })
