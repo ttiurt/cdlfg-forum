@@ -11,10 +11,12 @@
           <summary><%= post.title %></summary>
           <p>-Currently <%= post.rank %></p>
           <p>-Needs <%= post.lookingFor %> players</p>
-          <p>-They <%= post.mic ? 'have a mic' : `don't have a mic` %></p>
-          <p>-Their gamertag is "<%= post.gamertag %>"</p>
-          <p>Additional Comments: <%= post.moreInfo %></p>
-          <a href="/posts/<%= post._id %>">DETAILS</a>
+          <% if (user) { %>
+            <p>-They <%= post.mic ? 'have a mic' : `don't have a mic` %></p>
+            <p>-Their gamertag is "<%= post.gamertag %>"</p>
+            <p>Additional Comments: <%= post.moreInfo %></p>
+            <a href="/posts/<%= post._id %>">DETAILS</a>
+          <% } %>
         </details>
       <% }) %>
     </body>

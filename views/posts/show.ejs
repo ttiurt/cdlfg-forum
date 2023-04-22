@@ -7,10 +7,13 @@
   <p>-Currently <%= post.rank %></p>
   <p>-Needs <%= post.lookingFor %> players</p>
   <p>-They <%= post.mic ? 'have a mic' : `don't have a mic` %></p>
-  <p>-Their gamertag is "<%= post.gamertag %>" (player will post Activision ID # in comments)</p>
-  <p>Additional Comments: <%= post.moreInfo %></p>
+  <p>-Their gamertag is "<%= post.gamertag %>" (player will post Activision ID # in extras)</p>
+  <p>Extras: <%= post.moreInfo %></p>
   <% if (post.player.equals(user?.profile._id)) { %>
     <a href="/posts/<%= post._id %>/edit"><button>EDIT POST</button></a>
+    <form action="/posts/<%= post._id %>?_method=DELETE" method="POST">
+      <button type="submit">DELETE POST</button>
+    </form>
   <% } %>
 </section>
 

@@ -6,11 +6,10 @@ function newPost(req, res){
   })
 }
 
-function create(req,res){
+function create(req, res){
   req.body.player = req.user.profile._id
   req.body.mic = !!req.body.mic
   Post.create(req.body)
-  console.log(req.body)
   .then(post => {
     res.redirect('/posts')
   })
@@ -88,6 +87,24 @@ function update(req, res){
   })
 }
 
+function deletePost(req, res){
+  Post.findById(req.params.postId)
+  .then(post => {
+    post.deleteOne()
+    .then(() => {
+      res.redirect('/posts')
+    })
+    .catch(error => {
+      console.log(error)
+      res.redirect('/posts')
+    })
+  })
+  .catch(error => {
+    console.log(error)
+    res.redirect('/posts')
+  })
+}
+
 export {
   newPost as new,
   create,
@@ -95,4 +112,5 @@ export {
   show,
   edit,
   update,
+  deletePost as delete,
 }
