@@ -61,7 +61,30 @@ function edit(req, res){
   })
   .catch(error => {
     console.log(error)
-    res.redirect('/')
+    res.redirect('/posts')
+  })
+}
+
+function update(req, res){
+  Post.findById(req.params.postId)
+  .then(post => {
+    if (post.player.equals(req.user.profile._id)){
+      req.body.mic = !!req.body.mic
+      post.updateOne(req.body)
+      .then(() => {
+        res.redirect(`/posts/${post._id}`)
+      })
+      .catch(error => {
+        console.log(error)
+        res.redirect('/')
+      })
+    } else {
+      throw new Error('NOT AUTHORIZED TO EDIT')
+    }
+  })
+  .catch(error => {
+    console.log(error)
+    res.redirect('/posts')
   })
 }
 
@@ -71,4 +94,5 @@ export {
   index,
   show,
   edit,
+  update,
 }
