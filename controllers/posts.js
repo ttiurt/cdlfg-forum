@@ -1,4 +1,5 @@
 import { Post } from "../models/post.js"
+import { Account } from "../models/account.js"
 
 function newPost(req, res){
   res.render('posts/new', {

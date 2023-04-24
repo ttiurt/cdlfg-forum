@@ -4,7 +4,7 @@ const Schema = mongoose.Schema
 
 const commentSchema = new Schema({
   content: String,
-  responder: { type: Schema.Types.ObjectId, re: "Profile"},
+  responder: { type: Schema.Types.ObjectId, ref: 'Profile'},
 })
 
 const postSchema = new Schema({ 
@@ -15,6 +15,7 @@ const postSchema = new Schema({
   mic: { type: Boolean, required: true},
   moreInfo: { type: String },
   player: { type: Schema.Types.ObjectId, ref: 'Profile' },
+  account: { type: Schema.Types.ObjectId, ref: 'Account'},
   comments: [commentSchema]
 }, {
   timestamps: true,

@@ -9,6 +9,7 @@
       <% posts.forEach((post) => { %>
         <details>
           <summary><%= post.title %></summary>
+          <h4><%= post.name %></h4>
           <p>-Currently <%= post.rank %></p>
           <p>-Needs <%= post.lookingFor %> players</p>
           <% if (user) { %>
