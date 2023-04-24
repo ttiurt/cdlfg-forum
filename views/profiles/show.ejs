@@ -1,0 +1,21 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<main>
+  <div>
+    <img 
+      class="profile-avatar"
+      src="<%= profile.avatar %>" 
+      alt="<%= profile.username %>'s avatar"
+    >
+  </div>
+  <h1><%= isSelf ? "Your Profile" : profile.username %></h1>
+  <p><%= profile.bio %></p>
+  <p>ACTIVISION ID:<%= profile.actid %></p>
+  <p>BATTLE.NET:<%= profile.battlenet %></p>
+  <p>STEAM:<%= profile.steam %></p>
+  <p>XBOX:<%= profile.xbox %></p>
+  <p>PSN:<%= profile.psn %></p>
+</main>
+
+<%- include('../partials/footer') %>
