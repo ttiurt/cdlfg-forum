@@ -19,18 +19,56 @@ function show(req, res) {
   .then(profile => {
     const isSelf = profile._id.equals(req.user.profile._id)
     res.render("profiles/show", {
-      title: `${profile.username}'s profile`,
+      title: `${profile.username}'S PROFILE`,
       profile,
       isSelf,
     })
   })
-  .catch((err) => {
-    console.log(err)
+  .catch((error) => {
+    console.log(error)
     res.redirect("/profiles")
+  })
+}
+
+function edit(req, res){
+  Profile.findById(req.params.postId)
+  .then(profile => {
+    res.render('profiles/edit', {
+      profile,
+      title: 'EDIT PROFILE'
+    })
+  })
+  .catch(error => {
+    console.log(error)
+    res.redirect('/profiles')
+  })
+}
+
+function update(req, res){
+  Profile.findById(req.params.postId)
+  .then(profile => {
+    if (profile.equals(req.user.profile._id)){
+      profile.updateOne(req.body)
+      .then(() => {
+        res.redirect(`/profiles/${profile._id}`)
+      })
+      .catch(error => {
+        console.log(error)
+        res.redirect('/')
+      })
+    } else {
+      throw new Error('NOT AUTHORIZED TO EDIT')
+    }
+  })
+  .catch(error => {
+    console.log(error)
+    res.redirect('/posts')
   })
 }
 
 export {
   index,
   show,
+  edit,
+  update,
 }

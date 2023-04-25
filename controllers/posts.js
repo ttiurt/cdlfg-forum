@@ -1,5 +1,5 @@
 import { Post } from "../models/post.js"
-import { Account } from "../models/account.js"
+
 
 function newPost(req, res){
   res.render('posts/new', {
@@ -137,7 +137,7 @@ function editComment(req, res){
       res.render('posts/editComment', {
         post,
         comment,
-        title: 'Update Comment'
+        title: 'UPDATE COMMENT'
       })
     } else {
       throw new Error('NOT AUTHORIZED TO EDIT')

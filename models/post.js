@@ -15,7 +15,6 @@ const postSchema = new Schema({
   mic: { type: Boolean, required: true},
   moreInfo: { type: String },
   player: { type: Schema.Types.ObjectId, ref: 'Profile' },
-  account: { type: Schema.Types.ObjectId, ref: 'Account'},
   comments: [commentSchema]
 }, {
   timestamps: true,

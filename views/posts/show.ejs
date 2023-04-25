@@ -19,7 +19,7 @@
   <ul>
     <% post.comments?.forEach(comment => { %>
       <li>
-        <%= comment.content %> - <%= comment.responder.name %>
+        <%= comment.content %> - <%= comment.responder.username %>
         <% if (comment.responder.equals(user?.profile._id)) { %>
           <form action="/posts/<%= post._id %>/comments/<%= comment._id %>?_method=DELETE" method="POST">
             <button type="submit">DELETE REPLY</button>

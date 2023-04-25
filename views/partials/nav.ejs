@@ -7,7 +7,9 @@
     <a href="/home">HOME</a>
     <a href="posts/new">CREATE POST</a>
     <a href="/posts">ALL POSTS</a>
-    <a href="/profiles">PROFILES</a>
+    <% if (user) { %>
+      <a href="/profiles">PROFILES</a>
+    <% } %>
     <% if (user) { %>
       <a href="/auth/logout" class="right">
         <button type="submit">Logout</button>

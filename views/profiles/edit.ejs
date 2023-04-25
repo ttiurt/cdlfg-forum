@@ -1,0 +1,44 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<main>
+  <div>
+    <img 
+      class="profile-avatar"
+      src="<%= profile.avatar %>" 
+      alt="<%= profile.username %>'s avatar"
+    >
+  </div>
+  <form action="/profiles/<%= profile._id %>?_method=PUT" method="POST">
+    <label>
+      USERNAME: <input type="text" value="<%= profile.username %>">
+    </label>
+    <label>
+      BIO: <textarea 
+      cols="30"
+      rows="5" 
+      type="text"
+      name="content" 
+      autocomplete="off"
+      ><%= profile.bio %></textarea>
+    </label>
+    <label>
+      ACTIVISION ID: <input type="text" value="<%= profile.actid %>">
+    </label>
+    <label>
+      BATTLE.NET: <input type="text" value="<%= profile.battlenet %>">
+    </label>
+    <label>
+      STEAM: <input type="text" value="<%= profile.steam %>">
+    </label>
+    <label>
+      XBOX: <input type="text" value="<%= profile.xbox %>">
+    </label>
+    <label>
+      PSN: <input type="text" value="<%= profile.psn %>">
+    </label>
+    <button type="submit">UPDATE PROFILE</button>
+  </form>
+</main>
+
+<%- include('../partials/footer') %>

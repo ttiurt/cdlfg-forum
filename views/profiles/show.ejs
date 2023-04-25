@@ -16,6 +16,9 @@
   <p>STEAM:<%= profile.steam %></p>
   <p>XBOX:<%= profile.xbox %></p>
   <p>PSN:<%= profile.psn %></p>
+  <% if (isSelf) { %>
+    <a href="/profiles/<%= profile._id %>/edit"><button>EDIT PROFILE</button></a>
+  <% } %>
 </main>
 
 <%- include('../partials/footer') %>

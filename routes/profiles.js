@@ -8,6 +8,12 @@ router.get('/', isLoggedIn, profilesCtrl.index)
 
 router.get('/:postId', isLoggedIn, profilesCtrl.show)
 
+router.get('/:postId/edit', isLoggedIn, profilesCtrl.edit)
+
+router.put('/:postId', isLoggedIn, profilesCtrl.update)
+
+
+
 export {
   router
 }
