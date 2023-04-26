@@ -5,11 +5,11 @@
 <body>
   <nav>
     <a href="/home"><img src="/imgs/icons8-nuke-50.png" alt="LFG LOGO" width="50" height="50"></a>
-    <a href="/home">HOME</a>
-    <a href="posts/new">CREATE POST</a>
-    <a href="/posts">ALL POSTS</a>
+    <a class="pages" href="/home">HOME</a>
+    <a class="pages" href="posts/new">CREATE POST</a>
+    <a class="pages" href="/posts">ALL POSTS</a>
     <% if (user) { %>
-      <a href="/profiles">PROFILES</a>
+      <a class="pages" href="/profiles">PROFILES</a>
     <% } %>
     <% if (user) { %>
       <a href="/auth/logout" class="right">

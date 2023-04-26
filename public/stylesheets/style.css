@@ -12,8 +12,7 @@ html {
 }
 
 body {
-  background-image: url(/imgs/ghost.jpg);
-  background-attachment: fixed;
+  background: #141414;
   color: #f6f6f6;
   /* Use a system font, if none are available use any found sans-sarif font */
   font-family: system-ui, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 
@@ -34,7 +33,6 @@ nav {
 }
 
 main {
-  margin-top: 85px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -53,7 +51,7 @@ body > nav * {
 body > nav {
   grid-area: nav;
   background: transparent;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(15px);
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -109,6 +107,44 @@ nav > a:hover:before{
 
 nav > a.active {
   color: white;
+}
+
+.hero {
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: rgba(0,0,0, .6);
+  color: white;
+  min-height: 50vh;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.hero-text{
+  margin-bottom: 0;
+  background: transparent;
+  backdrop-filter: blur(10px);
+}
+
+.hero h1{
+  padding: 25px 25px 0 25px;
+  margin-bottom: 0;
+  margin-top: 0;
+  font-size: 70px;
+}
+
+.video-bg{
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  min-width: 100%;
+  min-height: 100%;
 }
 
 .home {
