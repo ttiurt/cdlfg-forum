@@ -21,21 +21,21 @@ html {
   backdrop-filter: blur(15px);
 }
 
-div > h1 {
+.home h1 {
   display: flex;
   align-items: center;
   align-content: center;
   justify-content: center;
 }
 
-div > h2 {
+.home h2 {
   display: flex;
   align-items: center;
   align-content: center;
   justify-content: center;
 }
 
-div > p {
+.home p {
   display: flex;
   align-items: center;
   align-content: center;

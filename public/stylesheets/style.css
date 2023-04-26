@@ -30,9 +30,11 @@ nav {
   padding: 10px;
   min-height: 85px;
   justify-content: space-between;
+  z-index: 9999;
 }
 
 main {
+  margin-top: 85px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -109,7 +111,37 @@ nav > a.active {
   color: white;
 }
 
+.home {
+  padding: 15px;
+  height: 100vh;
+  background: transparent;
+  background-color: rgba(0,0,0, .7);
+  backdrop-filter: blur(15px);
+}
+
+.home h1 {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.home h2 {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.home p {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
 section {
+  margin-top: 85px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -129,6 +161,10 @@ section body {
 }
 
 details {
+  padding: 15px;
+  background: transparent;
+  background-color: rgba(0,0,0, .7);
+  backdrop-filter: blur(15px);
   padding: 10px;
   border-radius: 4px;
 }
@@ -165,4 +201,13 @@ details[open] > summary::after {
 
 details > summary::-webkit-details-marker {
   display: none;
+}
+
+#new-post {
+  padding: 15px;
+  height: 650px;
+  width: 25vw;
+  background: transparent;
+  background-color: rgba(0,0,0, .7);
+  backdrop-filter: blur(15px);
 }
