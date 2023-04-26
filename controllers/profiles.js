@@ -45,11 +45,13 @@ function edit(req, res){
 }
 
 function update(req, res){
+  console.log(req.body)
   Profile.findById(req.params.postId)
   .then(profile => {
     if (profile._id.equals(req.user.profile._id)){
       profile.updateOne(req.body)
       .then(() => {
+        console.log(profile)
         res.redirect(`/profiles/${profile._id}`)
       })
       .catch(error => {

@@ -11,19 +11,19 @@
   </div>
   <form action="/profiles/<%= profile._id %>?_method=PUT" method="POST">
     <label>
-      USERNAME: <input type="text" value="<%= profile.username %>">
+      USERNAME: <input name="username" type="text" value="<%= profile.username %>">
     </label>
     <label>
       BIO: <textarea 
       cols="30"
       rows="5" 
       type="text"
-      name="content" 
+      name="bio" 
       autocomplete="off"
       ><%= profile.bio %></textarea>
     </label>
     <label>
-      ACTIVISION ID: <input type="text" value="<%= profile.actid %>">
+      ACTIVISION ID: <input name="actid" type="text" value="<%= profile.actid %>">
     </label>
     <button type="submit">UPDATE PROFILE</button>
   </form>

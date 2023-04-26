@@ -3,36 +3,45 @@
 <%- include('../partials/nav') %>
 
 <section>
+  <div class="post-pic">
+    <img 
+      class="profile-avatar"
+      src="<%= post.player.avatar %>" 
+      alt="<%= post.player.username %>'s avatar"
+    >
+  </div>
   <h1><%= post.title %></h1>
-  <p>-Currently <%= post.rank %></p>
-  <p>-Needs <%= post.lookingFor %> players</p>
-  <p>-They <%= post.mic ? 'have a mic' : `don't have a mic` %></p>
-  <p>-Their gamertag is "<%= post.gamertag %>"</p>
-  <p>Extras: <%= post.moreInfo %></p>
+  <h2><%= post.player.username %> / <%= post.player.actid %></h2>
+  <p>CURRENTLY: <%= post.rank %></p>
+  <p>NEEDS: <%= post.lookingFor %> players</p>
+  <p>THEY <%= post.mic ? 'HAVE A MIC' : `DON'T HAVE A MIC` %></p>
+  <p>GAMERTAG: "<%= post.gamertag %>"</p>
+  <p>EXTRAS: <%= post.moreInfo %></p>
   <% if (post.player.equals(user?.profile._id)) { %>
     <a href="/posts/<%= post._id %>/edit"><button>EDIT POST</button></a>
     <form action="/posts/<%= post._id %>?_method=DELETE" method="POST">
       <button type="submit">DELETE POST</button>
     </form>
   <% } %>
-  <h2>REPLIES</h2>
+  <h1>REPLIES</h1>
   <ul>
     <% post.comments?.forEach(comment => { %>
-      <li>
-        <%= comment.content %> - <%= comment.responder.username %>
+      <div class="comment">
+        <%= comment.responder.username %> <br> <%= comment.content %> 
         <% if (comment.responder.equals(user?.profile._id)) { %>
           <form action="/posts/<%= post._id %>/comments/<%= comment._id %>?_method=DELETE" method="POST">
-            <button type="submit">DELETE REPLY</button>
+            <button type="submit">DELETE</button>
           </form>
           <a href="/posts/<%= post._id %>/comments/<%= comment._id %>/edit">
-            <button>EDIT REPLY</button>
+            <button>EDIT</button>
           </a>
         <% } %>
-      </li>
+      </div>
+      
     <% }) %>
   </ul>
   <% if (user) { %>
-    <h3>Reply</h3>
+    <h3>REPLY</h3>
     <form action="/posts/<%= post._id %>/comments" method="POST">
       <textarea name="content"></textarea><br>
       <button>ADD REPLY</button>

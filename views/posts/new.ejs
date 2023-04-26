@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="/stylesheets/form.css" />
 <%- include('../partials/nav') %>
 
-<main>
+<main class="newpost-main">
   <h1><%= title %></h1>
   <% if (user) { %>
     <form id="new-post" action="/posts" method="POST">

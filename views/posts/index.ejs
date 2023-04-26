@@ -8,14 +8,16 @@
     <body>
       <% posts.forEach((post) => { %>
         <details>
-          <summary><%= post.title %></summary>
-          <h4><%= post.name %></h4>
-          <p>-Currently <%= post.rank %></p>
-          <p>-Needs <%= post.lookingFor %> players</p>
+          <summary>
+            <h4><%= post.title %></h2>
+            <p><%= post.player.username %></p>
+          </summary>
+          <p>CURRENTLY: <%= post.rank %></p>
+          <p>NEEDS: <%= post.lookingFor %> players</p>
           <% if (user) { %>
-            <p>-They <%= post.mic ? 'have a mic' : `don't have a mic` %></p>
-            <p>-Their gamertag is "<%= post.gamertag %>"</p>
-            <p>Additional Comments: <%= post.moreInfo %></p>
+            <p>THEY <%= post.mic ? 'HAVE A MIC' : `DON'T HAVE A MIC` %></p>
+            <p>ACTIVISION ID: "<%= post.gamertag %>"</p>
+            <p>ADDITIONAL INFO: <%= post.moreInfo %></p>
             <a href="/posts/<%= post._id %>">DETAILS</a>
           <% } %>
         </details>
