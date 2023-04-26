@@ -12,8 +12,6 @@ router.get('/:postId/edit', isLoggedIn, profilesCtrl.edit)
 
 router.put('/:postId', isLoggedIn, profilesCtrl.update)
 
-
-
 export {
   router
 }

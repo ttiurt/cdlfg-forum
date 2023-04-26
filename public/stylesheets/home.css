@@ -1,0 +1,43 @@
+html {
+  box-sizing: border-box;
+}
+
+/* The Universal Selector */
+*, /* All elements*/
+*::before, /* All ::before pseudo-elements */
+*::after {
+  /* All ::after pseudo-elements */
+  /* height & width will now include border & padding by default but can be overridden as needed */
+  box-sizing: inherit;
+}
+
+
+.home {
+  margin-top: 85px;
+  padding: 15px;
+  height: 100vh;
+  background: transparent;
+  background-color: rgba(0,0,0, .7);
+  backdrop-filter: blur(15px);
+}
+
+div > h1 {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+div > h2 {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+div > p {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}

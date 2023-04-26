@@ -80,7 +80,7 @@ app.use(function (err, req, res, next) {
   // render the error page
   res.status(err.status || 500)
   res.render('error', {
-    title: `🎊 ${err.status || 500} Error`,
+    title: `${err.status || 500} Error`,
     user: req.user ? req.user : null,
     googleClientID: process.env.GOOGLE_CLIENT_ID,
   })

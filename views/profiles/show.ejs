@@ -12,10 +12,6 @@
   <h1><%= isSelf ? "Your Profile" : profile.username %></h1>
   <p><%= profile.bio %></p>
   <p>ACTIVISION ID:<%= profile.actid %></p>
-  <p>BATTLE.NET:<%= profile.battlenet %></p>
-  <p>STEAM:<%= profile.steam %></p>
-  <p>XBOX:<%= profile.xbox %></p>
-  <p>PSN:<%= profile.psn %></p>
   <% if (isSelf) { %>
     <a href="/profiles/<%= profile._id %>/edit"><button>EDIT PROFILE</button></a>
   <% } %>

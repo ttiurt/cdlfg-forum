@@ -12,7 +12,8 @@ html {
 }
 
 body {
-  background-color: #1a1a1a;
+  background-image: url(/imgs/ghost.jpg);
+  background-attachment: fixed;
   color: #f6f6f6;
   /* Use a system font, if none are available use any found sans-sarif font */
   font-family: system-ui, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 
@@ -23,11 +24,12 @@ body {
 nav {
   background-color: #f6f6f6;
   color: #1a1a1a;
+  font-size: 25px;
   display: flex;
   align-items: center;
   padding: 10px;
-  min-height: 60px;
-  justify-content: space-evenly;
+  min-height: 85px;
+  justify-content: space-between;
 }
 
 main {
@@ -41,13 +43,23 @@ main {
   margin-left: auto;
 }
 
+body > nav * {
+  box-sizing: border-box;
+  transition: all 0.35s ease;
+}
+
 body > nav {
   grid-area: nav;
-  background-color: #b8c0c2;
+  background: transparent;
+  backdrop-filter: blur(10px);
   display: flex;
   justify-content: flex-end;
   align-items: center;
   padding: 0 20px 0 30px;
+  gap: 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 nav > i {
@@ -57,20 +69,40 @@ nav > i {
 }
 
 nav > a {
-  margin: 20px;
+  display: inline-block;
+  padding: 0.5em 17px;
+  color: rgba(255, 255, 255, 0.5);
+  position: relative;
+  letter-spacing: 1px;
   text-decoration: none;
-  padding: 10px;
-  border-radius: 5px;
-  color: #424748;
+}
+
+nav > a:before{
+  left: 20%;
+  right: 20%;
+  top: 50%;
+  content: '';
+  border-left: 12px solid #4fda6f;
+  border-right: 12px solid #4fda6f;
+  transform: translateY(-50%);
+  height: 3px;
+  opacity: 0;
+  position: absolute;
+  transition: all 0.35s ease;
 }
 
 nav > a:visited {
-  color: #424748;
+  color: #a1a1a1;
 }
 
 nav > a:hover {
   color: white;
-  background-color: #424748;
+}
+
+nav > a:hover:before{
+  left: 0;
+  right: 0;
+  opacity: 1;
 }
 
 nav > a.active {
