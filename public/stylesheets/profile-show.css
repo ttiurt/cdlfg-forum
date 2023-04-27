@@ -1,3 +1,28 @@
-.profile-main{
-  margin-top: 150px;
+.container {  
+  width: 75%;
+  background: black;
+  margin-top: 85px;
+  padding:50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "profile-avatar bio ."
+    "usernames . .";
+}
+
+.profile-avatar { 
+  grid-area: img;
+  justify-self: center;
+  align-self: center;
+}
+
+.usernames { grid-area: usernames; }
+
+.bio { 
+  grid-area: bio;
+  justify-self: start;
+  align-self: start;
 }
