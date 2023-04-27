@@ -1,5 +1,5 @@
 <%- include('../partials/html-head') %>
-<link rel="stylesheet" href="/stylesheets/style.css" />
+<link rel="stylesheet" href="/stylesheets/index.css" />
 <%- include('../partials/nav') %>
 
 <section>
@@ -9,7 +9,7 @@
       <% posts.forEach((post) => { %>
         <details>
           <summary>
-            <h4><%= post.title %></h2>
+            <h3><%= post.title %></h3>
             <p><%= post.player.username %></p>
           </summary>
           <p>CURRENTLY: <%= post.rank %></p>

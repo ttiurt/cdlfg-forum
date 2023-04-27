@@ -1,3 +1,12 @@
+@font-face {
+  font-family: Syne;
+  src: url(syne.ttf);
+}
+@font-face {
+  font-family: SpaceMono;
+  src: url(SpaceMono-Bold.ttf);
+}
+
 .hero {
   top: 0;
   display: flex;
@@ -14,13 +23,14 @@
 }
 
 .hero-text{
+  font-family: Syne;
   margin-bottom: 0;
   background: transparent;
   backdrop-filter: blur(10px);
 }
 
 .hero h1{
-  padding: 25px 25px 0 25px;
+  padding: 0 25px 0 25px;
   margin-bottom: 0;
   margin-top: 0;
   font-size: 70px;
@@ -37,30 +47,40 @@
 }
 
 .home {
-  padding: 15px;
   height: 100vh;
-  background: transparent;
-  background-color: rgba(0,0,0, .7);
+  background-color: rgb(30, 30, 30);
   backdrop-filter: blur(15px);
+  width: 75%;
+  color: white;
 }
 
-.home h1 {
-  display: flex;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
+.container {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "cdlfg cdlfg cdlfg cdlfg"
+    "logo logo slogan slogan"
+    "logo logo . ."
+    "login login . ."
+    "filledcomplete filledcomplete . aidhelp";
 }
 
-.home h2 {
-  display: flex;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
+.cdlfg { 
+  overflow: hidden;
+  font-family: SpaceMono;
+  grid-area: cdlfg;
+  font-size: 300px;
 }
 
-.home p {
-  display: flex;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
-}
+.logo { grid-area: logo; }
+
+.slogan { grid-area: slogan; }
+
+.login { grid-area: login; }
+
+.filledcomplete { grid-area: filledcomplete; }
+
+.aidhelp { grid-area: aidhelp; }
+

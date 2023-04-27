@@ -1,17 +1,21 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
 
+<link rel="stylesheet" href="/stylesheets/profile-show.css">
+
 <main class="profile-main">
   <div>
     <img 
       class="profile-avatar"
       src="<%= profile.avatar %>" 
       alt="<%= profile.username %>'s avatar"
+      height="200"
+      width="200"
     >
   </div>
+  <p>ACTIVISION ID: <%= profile.actid %></p>
+  <label>BIO:<p><%= profile.bio %></p></label>
   <h1><%= isSelf ? "Your Profile" : profile.username %></h1>
-  <p><%= profile.bio %></p>
-  <p>ACTIVISION ID:<%= profile.actid %></p>
   <% if (isSelf) { %>
     <a href="/profiles/<%= profile._id %>/edit"><button>EDIT PROFILE</button></a>
   <% } %>
