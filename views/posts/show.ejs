@@ -3,13 +3,6 @@
 <%- include('../partials/nav') %>
 
 <section>
-  <div class="post-pic">
-    <img 
-      class="profile-avatar"
-      src="<%= post.player.avatar %>" 
-      alt="<%= post.player.username %>'s avatar"
-    >
-  </div>
   <h1><%= post.title %></h1>
   <h2><%= post.player.username %> / <%= post.player.actid %></h2>
   <p>CURRENTLY: <%= post.rank %></p>

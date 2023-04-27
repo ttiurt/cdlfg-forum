@@ -2,27 +2,24 @@
 <link rel="stylesheet" href="/stylesheets/index.css" />
 <%- include('../partials/nav') %>
 
-<section>
-  <h1>POSTS</h1>
-  <h2>CURRENTLY LOOKING</h2>
-    <body>
-      <% posts.forEach((post) => { %>
-        <details>
-          <summary>
-            <h3><%= post.title %></h3>
-            <p><%= post.player.username %></p>
-          </summary>
-          <p>CURRENTLY: <%= post.rank %></p>
-          <p>NEEDS: <%= post.lookingFor %> players</p>
-          <% if (user) { %>
-            <p>THEY <%= post.mic ? 'HAVE A MIC' : `DON'T HAVE A MIC` %></p>
-            <p>ACTIVISION ID: "<%= post.gamertag %>"</p>
-            <p>ADDITIONAL INFO: <%= post.moreInfo %></p>
-            <a href="/posts/<%= post._id %>">DETAILS</a>
-          <% } %>
-        </details>
-      <% }) %>
-    </body>
-</section>
+<main class="postIndexMain">
+  <div class="postsIndex">POSTS</div>
+  <% posts.forEach((post) => { %>
+    <details>
+      <summary class="summary">
+        <div class="postTitle"><%= post.title %></div>
+        <div class="postUser"><%= post.player.username %></div>
+      </summary>        
+      <p>CURRENTLY: <%= post.rank %></p>
+      <p>NEEDS: <%= post.lookingFor %> players</p>
+      <% if (user) { %>
+        <p>THEY <%= post.mic ? 'HAVE A MIC' : `DON'T HAVE A MIC` %></p>
+        <p>ACTIVISION ID: "<%= post.gamertag %>"</p>
+        <p>ADDITIONAL INFO: <%= post.moreInfo %></p>
+        <a href="/posts/<%= post._id %>">DETAILS</a>
+      <% } %>
+    </details>
+  <% }) %>
+</main>
 
 <%- include('../partials/footer') %>
