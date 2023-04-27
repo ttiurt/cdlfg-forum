@@ -4,7 +4,12 @@
 }
 @font-face {
   font-family: SpaceMono;
-  src: url(SpaceMono-Bold.ttf);
+  src: url(/fonts/SpaceMono-Bold.ttf);
+}
+
+@font-face {
+  font-family: raleway;
+  src: url(/fonts/Raleway[wght].ttf);
 }
 
 .hero {
@@ -54,7 +59,8 @@
   color: white;
 }
 
-.container {  display: grid;
+.container {  
+  display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   gap: 0px 0px;
@@ -68,19 +74,53 @@
 }
 
 .cdlfg { 
+  width: 100%;
+  justify-self: stretch;
+  align-self: center;
   overflow: hidden;
-  font-family: SpaceMono;
+  font-family: Raleway;
+  font-weight: bold;
   grid-area: cdlfg;
-  font-size: 300px;
+  font-size: 275px;
+  
 }
 
-.logo { grid-area: logo; }
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
 
-.slogan { grid-area: slogan; }
+.logo { 
+  grid-area: logo;
+  justify-self: center;
+  align-self: center;
+}
 
-.login { grid-area: login; }
+.logo:hover{
+  animation: spin 3s infinite;
+}
 
-.filledcomplete { grid-area: filledcomplete; }
+.slogan { 
+  grid-area: slogan;
+  font-size: 45px;
+  text-align: right;
+}
 
-.aidhelp { grid-area: aidhelp; }
+.login { 
+  grid-area: login;
+  font-size: 45px;
+  text-align: left;
+}
+
+.filledcomplete { 
+  grid-area: filledcomplete;
+  font-size: 40px;
+  text-align: left;
+}
+
+.aidhelp { 
+  grid-area: aidhelp;
+  font-size: 35px;
+  text-align: right;
+}
 
