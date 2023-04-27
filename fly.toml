@@ -1,9 +1,9 @@
-# fly.toml app configuration file generated for ranked-play-lfg on 2023-04-25T17:04:29-04:00
+# fly.toml app configuration file generated for cdlfg on 2023-04-27T12:11:01-04:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = "ranked-play-lfg"
+app = "cdlfg"
 primary_region = "iad"
 
 [env]
