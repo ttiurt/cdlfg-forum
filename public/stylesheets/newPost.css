@@ -27,7 +27,7 @@ form > div {
 input {
   height: 4vw;
   font-size: 2.75vw;
-  width: 20vw;
+  width: 28vw;
   color: white;
   justify-self: center;
   background: transparent;
@@ -72,4 +72,30 @@ form > button {
 
 form > button:hover {
   cursor: pointer;
+}
+
+.disc {
+  width: 50%;
+  font-size: 1.5vw;
+}
+
+.makeReply { 
+  font-size: 4vw;
+  align-items: center;
+  margin-left: 2vw;
+}
+
+textarea {
+  height: 10vw;
+  width: 30vw;
+  background: transparent;
+  border: .5vw dashed #7CD577;
+  color: white;
+  font-family: syne;
+  font-size: 3vw;
+}
+
+textarea::-webkit-scrollbar {
+  width: .05vw;
+  background: transparent;
 }

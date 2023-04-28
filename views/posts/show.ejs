@@ -1,45 +1,51 @@
 <%- include('../partials/html-head') %>
-<link rel="stylesheet" href="/stylesheets/style.css" />
+<link rel="stylesheet" href="/stylesheets/showPost.css" />
 <%- include('../partials/nav') %>
 
-<section>
-  <h1><%= post.title %></h1>
-  <h2><%= post.player.username %> / <%= post.player.actid %></h2>
-  <p>CURRENTLY: <%= post.rank %></p>
-  <p>NEEDS: <%= post.lookingFor %> players</p>
-  <p>THEY <%= post.mic ? 'HAVE A MIC' : `DON'T HAVE A MIC` %></p>
-  <p>GAMERTAG: "<%= post.gamertag %>"</p>
-  <p>EXTRAS: <%= post.moreInfo %></p>
+<div class="postTitle"><%= post.title %></div>
+<div class="container">
+  <div class="username"><%= post.player.username %></div>
+  <br>
+  <br>
+  <div class="rank">CURRENTLY: <%= post.rank %></div>
+  <div class="looking">NEEDS: <%= post.lookingFor %> players</div>
+  <div class="mic">THEY <%= post.mic ? 'HAVE A MIC' : `DON'T HAVE A MIC` %></div>
+  <div class="gamertag">GAMERTAG: "<%= post.gamertag %>"</div>
+  <div class="extras">EXTRAS: <%= post.moreInfo %></div>
   <% if (post.player.equals(user?.profile._id)) { %>
-    <a href="/posts/<%= post._id %>/edit"><button>EDIT POST</button></a>
+    <a href="/posts/<%= post._id %>/edit"><button class="btn">EDIT POST</button></a>
     <form action="/posts/<%= post._id %>?_method=DELETE" method="POST">
-      <button type="submit">DELETE POST</button>
+      <button class="btn" type="submit">DELETE POST</button>
     </form>
   <% } %>
-  <h1>REPLIES</h1>
-  <ul>
+  <br>
+  <br>
+  <br>
+  <div class="replies">
+    <div class="repliesTitle">REPLIES</div>
     <% post.comments?.forEach(comment => { %>
       <div class="comment">
-        <%= comment.responder.username %> <br> <%= comment.content %> 
+        <%= comment.responder.username %>: <%= comment.content %> 
         <% if (comment.responder.equals(user?.profile._id)) { %>
           <form action="/posts/<%= post._id %>/comments/<%= comment._id %>?_method=DELETE" method="POST">
-            <button type="submit">DELETE</button>
+            <button class="replyBtn" type="submit">DELETE</button>
           </form>
           <a href="/posts/<%= post._id %>/comments/<%= comment._id %>/edit">
-            <button>EDIT</button>
+            <button class="replyBtn">EDIT</button>
           </a>
         <% } %>
       </div>
-      
     <% }) %>
-  </ul>
-  <% if (user) { %>
-    <h3>REPLY</h3>
-    <form action="/posts/<%= post._id %>/comments" method="POST">
-      <textarea style="resize: none;" name="content"></textarea><br>
-      <button>ADD REPLY</button>
-    </form>
-  <% } %>
-</section>
+    </div>
+  <div class="makeReply">
+    <% if (user) { %>
+      <div>REPLY</div>
+      <form action="/posts/<%= post._id %>/comments" method="POST">
+        <textarea style="resize: none;" name="content"></textarea><br>
+        <button class="btn">REPLY</button>
+      </form>
+    <% } %>
+  </div>
+</div>
 
 <%- include('../partials/footer') %>

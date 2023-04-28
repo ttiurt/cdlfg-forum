@@ -1,0 +1,64 @@
+.container {  
+  margin-top: 85px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+.username {
+  font-size: 4vw;
+}
+
+.bio {
+  font-size: 4vw;
+}
+
+.actid {
+  font-size: 4vw;
+}
+
+form > div {
+  padding: 2vw 0 2vw 2vw;
+}
+
+input {
+  height: 4vw;
+  font-size: 2.75vw;
+  width: 28vw;
+  color: white;
+  background: transparent;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: .5vw solid #7CD577;
+}
+
+textarea {
+  height: 10vw;
+  width: 30vw;
+  background: transparent;
+  border: .5vw dashed #7CD577;
+  color: white;
+  font-family: syne;
+  font-size: 3vw;
+}
+
+textarea::-webkit-scrollbar {
+  width: .05vw;
+  background: transparent;
+}
+
+.btn {
+  text-align: right;
+  height: 3vw;
+  font-size: 3vw;
+  margin-left: 75vw;
+  background: transparent;
+  border: none;
+  color: #7CD577;
+}
+
+.btn:hover {
+  cursor: pointer;
+}

@@ -17,7 +17,7 @@
           <% if (user) { %>
             <div>THEY <%= post.mic ? 'HAVE A MIC' : `DON'T HAVE A MIC` %></div>
             <div>ACTIVISION ID: "<%= post.gamertag %>"</div>
-            <div>ADDITIONAL INFO: <%= post.moreInfo %></div>
+            <div>EXTRAS: <%= post.moreInfo %></div>
           <a class="dets" href="/posts/<%= post._id %>">DETAILS</a>
           <% } %>
         </div>

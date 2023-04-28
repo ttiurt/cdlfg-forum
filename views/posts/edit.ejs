@@ -1,15 +1,13 @@
 <%- include('../partials/html-head') %>
-<link rel="stylesheet" href="/stylesheets/edit.css" />
+<link rel="stylesheet" href="/stylesheets/newPost.css" />
 <%- include('../partials/nav') %>
 
-<section>
-  <h1>EDIT POST</h1>
-  <form action="/posts/<%= post._id %>?_method=PUT" method="POST">
-    <label>
-      TITLE:
-      <input type="text" name="title" autocomplete="off" value="<%= post.title %>">
-    </label>
-    <label>
+<div class="container">
+  <form class="form" action="/posts/<%= post._id %>?_method=PUT" method="POST">
+    <div class="postTitle">
+      TITLE: <input type="text" name="title" autocomplete="off" value="<%= post.title %>">
+    </div>
+    <div class="rank">
       RANK:
       <select name="rank" value="<%= post.rank %>">
         <option value="BRONZE">BRONZE</option>
@@ -21,30 +19,27 @@
         <option value="IRIDESCENT">IRIDESCENT</option>
         <option value="TOP 250">TOP 250</option>
       </select>
-    </label>
-    <label>
-      GAMERTAG:
-      <input type="text" name="gamertag" value="<%= post.gamertag %>">
-    </label>
-    <label>
+    </div>
+    <div class="gamertag">
+      GAMERTAG: <input type="text" name="gamertag" value="<%= post.gamertag %>">
+    </div>
+    <div class="looking">
       LOOKING FOR:
       <select name="lookingFor" value="<%= post.lookingFor %>">
         <option value='1' >1</option>
         <option value='2' >2</option>
         <option value='3' >3</option>
       </select>
-    </label>
-    <label>
-      HAVE MIC:
-      <input type="checkbox" name="mic" <%= post.mic ? "checked" : "" %>>
-    </label>
-    <label>
-      ADDITIONAL COMMENTS:
-      <input type="text" name="moreInfo" value="<%= post.moreInfo %>">
-    </label>
-    <p>BEFORE UPDATING PLEASE CONFIRM DATA SUCH AS RANKS AND NUMBER OF PLAYERS YOU ARE LOOKING FOR IS CORRECT</p>
+    </div>
+    <div class="mic">
+      HAVE MIC: <input type="checkbox" name="mic" id="mic-checkbox" <%= post.mic ? "checked" : "" %>>
+    </div>
+    <div class="moreInfo">
+      ADDITIONAL COMMENTS: <input type="text" name="moreInfo" value="<%= post.moreInfo %>">
+    </div>
+    <div class="disc">BEFORE UPDATING PLEASE CONFIRM DATA SUCH AS RANKS AND NUMBER OF PLAYERS YOU ARE LOOKING FOR IS CORRECT</div>
       <button type="submit">EDIT POST</button>
   </form>
-</section>
+</div>
 
 <%- include('../partials/footer') %>

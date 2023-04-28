@@ -1,25 +1,28 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
+<link rel="stylesheet" href="/stylesheets/editProf.css">
 
-<main>
+<div class="container">
   <form action="/profiles/<%= profile._id %>?_method=PUT" method="POST">
-    <label>
+    <div class="username">
       USERNAME: <input name="username" type="text" value="<%= profile.username %>">
-    </label>
-    <label>
-      BIO: <textarea 
-      cols="30"
-      rows="5" 
+    </div>
+    <div class="actid">
+      ACTIVISION ID: <input name="actid" type="text" value="<%= profile.actid %>">
+    </div>
+    <div class="bio">
+      BIO:
+      <br>
+      <br>
+      <textarea 
       type="text"
       name="bio" 
+      style="resize: none;"
       autocomplete="off"
       ><%= profile.bio %></textarea>
-    </label>
-    <label>
-      ACTIVISION ID: <input name="actid" type="text" value="<%= profile.actid %>">
-    </label>
-    <button type="submit">UPDATE PROFILE</button>
+    </div>
+    <button class="btn" type="submit">UPDATE PROFILE</button>
   </form>
-</main>
+</div>
 
 <%- include('../partials/footer') %>
