@@ -1,9 +1,14 @@
 # C.D.L.F.G.
 ## A Call of Duty Ranked Play Group Finding Forum
 
-
+![alt text](/public/rm-pics/Screenshot%202023-04-28%20at%204.12.38%20AM.png)
+![alt text](/public/rm-pics/Screenshot%202023-04-28%20at%204.13.00%20AM.png)
+![alt text](/public/rm-pics/Screenshot%202023-04-28%20at%204.13.27%20AM.png)
+![alt text](/public/rm-pics/Screenshot%202023-04-28%20at%204.14.07%20AM.png)
 
 ## A LINK TO YOUR DREAM TEAM: https://cdlfg.fly.dev/home
+
+## A LINK TO MY TRELLO BOARD: https://trello.com/b/A96ARaIs/ranked-play-lfg-planning-board
 
 ### ABOUT:
 
@@ -23,17 +28,17 @@ This is a simple forum for easily finding a team to help you grind through the r
 
 ### RESOURCES:
 
-figma.com
+https://www.figma.com/?fuid=
 
-github.com
+https://github.com/ttiurt
 
-typewolf.com
+https://typewolf.com
 
-icons8.com
+https://icons8.com
 
-trello.com
+https://trello.com
 
-whimsical.com
+https://whimsical.com
 
 ### INSPO:
 
@@ -43,3 +48,12 @@ https://www.stedelijk.nl/en
 
 https://www.sing-thing.com/
 
+### BOX OF ICE: 
+
+-Mobile Friendly 
+
+-Polish CSS 
+
+-Add more games/gamemodes
+
+-More abilities to interact with others (friend request, direct messages, etc.)

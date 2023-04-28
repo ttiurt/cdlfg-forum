@@ -1,6 +1,6 @@
 html {
   box-sizing: border-box;
-  background: #303030;
+  background: rgb(30,30,30);
 }
 
 html::-webkit-scrollbar{
@@ -8,7 +8,7 @@ html::-webkit-scrollbar{
 }
 
 html::-webkit-scrollbar-track {
-  background: rgb(#303030);
+  background: rgb(30,30,30);
 }
 
 html::-webkit-scrollbar-thumb{
