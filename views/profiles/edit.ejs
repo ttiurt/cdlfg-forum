@@ -2,13 +2,6 @@
 <%- include('../partials/nav') %>
 
 <main>
-  <div>
-    <img 
-      class="profile-avatar"
-      src="<%= profile.avatar %>" 
-      alt="<%= profile.username %>'s avatar"
-    >
-  </div>
   <form action="/profiles/<%= profile._id %>?_method=PUT" method="POST">
     <label>
       USERNAME: <input name="username" type="text" value="<%= profile.username %>">

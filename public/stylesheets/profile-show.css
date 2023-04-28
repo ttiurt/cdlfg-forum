@@ -1,28 +1,78 @@
 .container {  
-  width: 75%;
-  background: black;
+  width: 100%;
+  height: 100%;
+  background: #303030;
   margin-top: 85px;
-  padding:50px;
+  padding-bottom: 0px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   gap: 0px 0px;
-  grid-auto-flow: row;
+  grid-auto-flow: column;
   grid-template-areas:
-    "profile-avatar bio ."
-    "usernames . .";
+    "username username username"
+    "actid . ."
+    "bio bio editBtn";
+}
+
+.username { 
+  grid-area: username;
+  width: 100%;
+  margin-bottom: 0px;
+  overflow: hidden;
+  justify-content: start;
+  align-self: end;
+}
+
+.nameText{
+  font-family: Raleway;
+  font-size:10.5vw;
+  overflow: hidden;
+  margin-top: -3.15vw;
+  margin-left: -1.75vw;
+  margin-bottom: 0;
 }
 
 .profile-avatar { 
   grid-area: img;
-  justify-self: center;
-  align-self: center;
+  place-self: center center;
+  width: 50%;
+  height: auto;
 }
 
-.usernames { grid-area: usernames; }
+.actid{
+  font-size: 2vw;
+  margin-left: 2vw;
+  font-weight: 600;
+}
+
+.actidText{
+  font-weight: 300;
+}
 
 .bio { 
   grid-area: bio;
-  justify-self: start;
-  align-self: start;
+  font-weight: 600;
+  font-size: 3vw;
+  margin-top: -0.7vw;
+  place-self: start start;
+  margin-left: 2vw;
+}
+
+.bioText {
+  font-size: 2vw;
+  font-weight: 300;
+  margin-left: 2vw;
+}
+
+.editBtn{
+  grid-area: editBtn;
+  font-size: 3vw;
+  margin-right: 2vw;
+  place-self: end end;
+}
+
+.editBtn a{
+  text-decoration: none;
+  color: #7CD577;
 }

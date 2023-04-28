@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  background: #303030;
 }
 
 /* The Universal Selector */
@@ -12,7 +13,7 @@ html {
 }
 
 body {
-  background: #141414;
+  background: #303030;
   color: #f6f6f6;
   /* Use a system font, if none are available use any found sans-sarif font */
   font-family: system-ui, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 
@@ -71,10 +72,11 @@ nav > i {
 .pages {
   display: inline-block;
   padding: 0.5em 17px;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(0, 0, 0, 0.5);
   position: relative;
   letter-spacing: 1px;
   text-decoration: none;
+  text-align: center;
 }
 
 .pages:before{
@@ -92,7 +94,7 @@ nav > i {
 }
 
 .pages:visited {
-  color: #a1a1a1;
+  color: #878787;
 }
 
 .pages:hover {
@@ -158,10 +160,6 @@ details > summary {
   list-style: none; 
 }
 
-/* details[open] > summary {
-  
-} */
-
 details > summary::after {
   font-size: smaller;
   font-style: italic;
@@ -176,6 +174,15 @@ details[open] > summary::after {
 
 details > summary::-webkit-details-marker {
   display: none;
+}
+
+.logout{
+  display: inline-block;
+  color: rgba(0, 0, 0, 0.5);
+  position: relative;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-align: center;
 }
 
 #new-post {

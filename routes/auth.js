@@ -5,7 +5,7 @@ const router = Router()
 
 router.post("/google", passport.authenticate("google-one-tap", {
   failureRedirect: "/home",
-  successRedirect: "/posts",
+  successRedirect: "/home",
 }))
 
 router.get('/logout', function (req, res, next) {

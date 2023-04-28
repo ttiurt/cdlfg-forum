@@ -12,58 +12,64 @@
   src: url(/fonts/Raleway.ttf);
 }
 
-.postsIndexMain {
-  height: 100vh;
-  background-color: rgb(30, 30, 30);
-  backdrop-filter: blur(15px);
-  color: white;
-  margin-top: 85px;
+.blocker{
+  width: 100%;
+  height: 85px;
+  font-size: 80px;
+  color: #303030;
+  background-color: #303030;
 }
 
-.postsIndex {
-  font-family: SpaceMono;
-  margin-top: 85px;
-  display: flex;
-  flex-direction: row;
-  text-align: left;
-  font-size: 75px;
-  border-bottom: 2px solid #424748;
+.title { 
+  font-family: Raleway;
+  background: #303030;
+  position: relative;
+  margin-top: 2.5vw;
+  margin-left: -2.5vw;
+  font-size:20vw;
+  width: 100%;
+  font-weight: 600;
+  overflow: hidden;
+  align-self: start;
+  margin-bottom: 0;
 }
 
-.summary {
-  display: flex;
-  flex-direction: column;
+.container {  
+  display: grid;
+  height: 100%;
+  background: #303030;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: column;
+  grid-template-areas:
+    "post";
+}
+
+.post { 
+  grid-area: post;
+  align-self: start;
 }
 
 .postTitle{
-  font-size: 45px;
-  font-weight: bolder;
+  font-size: 4.5vw;
+  font-weight: 600;
 }
 
 details {
-  display: flex;
-  flex-direction: column;
-  margin-top: 50px;
-  padding: 15px;
-  width: 750px;
-  background: transparent;
-  background-color: rgb(17, 17, 17);
-  backdrop-filter: blur(15px);
-  padding: 10px;
-  border-radius: 4px;
+  background: #303030;
 }
 
 details[open] {
   padding-bottom: 10px;
+  margin-left: 2vw;
 }
 
 details > summary {
-  display: flex;
   padding: 10px;
   border-radius: 4px;
   font-size: 24px;
   cursor: pointer;
-  justify-content: space-between;
   list-style: none; 
 }
 
@@ -72,20 +78,27 @@ details > summary {
 } */
 
 details > summary::after {
-  font-size: smaller;
+  font-size: larger;
   font-style: italic;
-  display: flex;
-  justify-content: right;
-  align-items: center;
   content: "view";
-  margin-left: 20px;
+  color: #7CD577;
 }
 
 details[open] > summary::after {
   font-style: italic;
   content: "hide";
+  color: #7CD577;
 }
 
 details > summary::-webkit-details-marker {
   display: none;
+}
+
+.postShow {
+  font-size: 2.5vw;
+}
+
+.dets{
+  text-decoration: none;
+  color: #7CD577;
 }

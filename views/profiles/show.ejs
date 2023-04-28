@@ -3,24 +3,21 @@
 
 <link rel="stylesheet" href="/stylesheets/profile-show.css">
 
-<main class="container">
-  <div>
-    <img 
-      class="profile-avatar"
-      src="<%= profile.avatar %>" 
-      alt="<%= profile.username %>'s avatar"
-      height="200"
-      width="200"
-    >
+<div class="container">
+  <div class="username">
+    <h1 class="nameText"><%= isSelf ? "YOUR PROFILE" : profile.username %></h1>
   </div>
-  <div class="bio">BIO: <%= profile.bio %></div>
-  <div class="usernames">
-    <h1><%= isSelf ? "Your Profile" : profile.username %></h1>
-    ACTIVISION ID: <%= profile.actid %> <br>
+  <div class="bio">
+    BIO:
+    <br>
+    <div class="bioText"><%= profile.bio %></div>
+  </div>
+  <div class="actid">
+    ACTIVISION ID: <div class="actidText"><%= profile.actid %></div>
+  </div>
   <% if (isSelf) { %>
-    <a href="/profiles/<%= profile._id %>/edit"><button>EDIT PROFILE</button></a>
+    <div class="editBtn"><a href="/profiles/<%= profile._id %>/edit">EDIT</a></div>
   <% } %>
-  </div>
-</main>
+</div>
 
 <%- include('../partials/footer') %>
