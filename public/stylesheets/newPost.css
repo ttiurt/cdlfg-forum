@@ -99,3 +99,8 @@ textarea::-webkit-scrollbar {
   width: .05vw;
   background: transparent;
 }
+
+.return {
+  text-decoration: none;
+  color: #7CD577;
+}
