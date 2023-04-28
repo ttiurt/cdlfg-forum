@@ -1,41 +1,48 @@
 <%- include('../partials/html-head') %>
-<link rel="stylesheet" href="/stylesheets/form.css" />
+<link rel="stylesheet" href="/stylesheets/newPost.css" />
 <%- include('../partials/nav') %>
 
-<main class="newpost-main">
-  <h1><%= title %></h1>
+<div class="container">
   <% if (user) { %>
-    <form id="new-post" action="/posts" method="POST">
-      <label for="title-input">TITLE:</label>
-      <input type="text" name="title" id="title-input" autocomplete="off">
-      <label for="rank-select">RANK:</label>
-      <select name="rank" id="rank-select">
-        <option value="BRONZE">BRONZE</option>
-        <option value="SILVER">SILVER</option>
-        <option value="GOLD">GOLD</option>
-        <option value="PLATINUM">PLATINUM</option>
-        <option value="DIAMOND">DIAMOND</option>
-        <option value="CRIMSON">CRIMSON</option>
-        <option value="IRIDESCENT">IRIDESCENT</option>
-        <option value="TOP 250">TOP 250</option>
-      </select>
-      <label for="gamertag-input">GAMERTAG:</label>
-      <input type="text" name="gamertag" id="gamertag-input">
-      <label for="lookingFor-num">LOOKING FOR:</label>
-      <select name="lookingFor" id="lookingFor-num">
-        <option value='1' >1</option>
-        <option value='2' >2</option>
-        <option value='3' >3</option>
-      </select>
-      <label for="mic-checkbox">HAVE MIC:</label>
-      <input type="checkbox" name="mic" id="mic-checkbox">
-      <label for="moreInfo-text">EXTRAS:</label>
-      <input type="text" name="moreInfo" id="moreInfo-text">
-      <button type="submit">POST</button>
+    <form class="form" id="new-post" action="/posts" method="POST">
+      <div class="postTitle">
+        TITLE: <input type="text" name="title" id="title-input" autocomplete="off">
+      </div>
+      <div class="rank" for="rank-select">
+        RANK:
+        <select name="rank" id="rank-select">
+          <option value="BRONZE">BRONZE</option>
+          <option value="SILVER">SILVER</option>
+          <option value="GOLD">GOLD</option>
+          <option value="PLATINUM">PLATINUM</option>
+          <option value="DIAMOND">DIAMOND</option>
+          <option value="CRIMSON">CRIMSON</option>
+          <option value="IRIDESCENT">IRIDESCENT</option>
+          <option value="TOP 250">TOP 250</option>
+        </select>
+      </div>
+      <div class="gamertag">
+        GAMERTAG: <input type="text" name="gamertag" id="gamertag-input">
+      </div>
+      <div class="looking">
+        LOOKING FOR:
+        <select name="lookingFor" id="lookingFor-num">
+          <option value='1' >1</option>
+          <option value='2' >2</option>
+          <option value='3' >3</option>
+        </select>
+      </div>
+      <div class="mic">
+        HAVE MIC: <input type="checkbox" name="mic" id="mic-checkbox">
+      </div>
+      <div class="moreInfo">
+        EXTRAS: <input type="text" name="moreInfo" id="moreInfo-text">
+      </div>
+      <button class="postBtn" type="submit">POST</button>
     </form>
   <% } else { %>
-    <h2>PLEASE RETURN <a href="/home">HOME</a> AND SIGN IN TO CREATE A POST</h2>
+    <h2>PLEASE RETURN <a class="return" href="/home">HOME</a> AND SIGN IN TO CREATE A POST</h2>
   <% } %>
-</main>
+  </div>
 
 <%- include('../partials/footer') %>

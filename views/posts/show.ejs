@@ -36,7 +36,7 @@
   <% if (user) { %>
     <h3>REPLY</h3>
     <form action="/posts/<%= post._id %>/comments" method="POST">
-      <textarea name="content"></textarea><br>
+      <textarea style="resize: none;" name="content"></textarea><br>
       <button>ADD REPLY</button>
     </form>
   <% } %>

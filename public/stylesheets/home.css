@@ -117,9 +117,9 @@
 .slogan { 
   grid-area: slogan;
   font-family: syne;
-  font-size: 4.5vw;
+  font-size: 3.9vw;
   text-align: right;
-  margin-right: 2vw;
+  margin-right: 4.5vw;
 }
 
 .login { 
@@ -152,6 +152,7 @@
 
 .visit-here{
   color: #7CD577;
+  text-decoration: none;
 }
 
 @media (min-width: 1280px) {

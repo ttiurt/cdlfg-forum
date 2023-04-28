@@ -1,0 +1,75 @@
+.container {  
+  margin-top: 85px;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr ;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: column;
+  grid-template-areas:
+    "form"
+    "form";
+}
+
+.form { 
+  margin-left: 2vw;
+  grid-area: form;
+  background: none;
+  font-size: 3vw;
+  justify-self: start;
+  align-self: start;
+}
+
+form > div {
+  padding: 2vw 0 2vw 0;
+}
+
+input {
+  height: 4vw;
+  font-size: 2.75vw;
+  width: 20vw;
+  color: white;
+  justify-self: center;
+  background: transparent;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: .5vw solid #7CD577;
+}
+
+input#mic-checkbox {
+  height: 2.5vw;
+  width: 2.5vw;
+  accent-color: #7CD577;
+}
+
+input#mic-checkbox{
+  cursor: pointer;
+}
+
+select {
+  height: 4vw;
+  width: auto;
+  font-size: 3.75vw;
+  border: none;
+  background: transparent;
+  accent-color: #7CD577;
+  color: #7CD577;
+}
+
+select:hover {
+  cursor: pointer;
+}
+
+form > button {
+  height: 4vw;
+  font-size: 4vw;
+  margin-left: 75vw;
+  background: transparent;
+  border: none;
+  color: #7CD577;
+}
+
+form > button:hover {
+  cursor: pointer;
+}

@@ -1,4 +1,5 @@
-.container {  
+.container {
+  font-family: Raleway;  
   width: 100%;
   height: 100%;
   background: #303030;
@@ -33,21 +34,16 @@
   margin-bottom: 0;
 }
 
-.profile-avatar { 
-  grid-area: img;
-  place-self: center center;
-  width: 50%;
-  height: auto;
-}
-
 .actid{
   font-size: 2vw;
   margin-left: 2vw;
   font-weight: 600;
+  font-family: Raleway;
 }
 
 .actidText{
   font-weight: 300;
+  font-family: syne;
 }
 
 .bio { 
@@ -63,6 +59,7 @@
   font-size: 2vw;
   font-weight: 300;
   margin-left: 2vw;
+  font-family: syne;
 }
 
 .editBtn{
