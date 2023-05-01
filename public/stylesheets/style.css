@@ -35,7 +35,7 @@ body {
 
 nav {
   background-color: #f6f6f6;
-  color: #1a1a1a;
+  color: #f6f6f6;
   font-size: 25px;
   display: flex;
   align-items: center;
@@ -106,7 +106,7 @@ nav > i {
 }
 
 .pages:visited {
-  color: #878787;
+  color: #a0a0a0;
 }
 
 .pages:hover {
