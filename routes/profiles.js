@@ -6,11 +6,11 @@ const router = Router()
 
 router.get('/', isLoggedIn, profilesCtrl.index)
 
-router.get('/:postId', isLoggedIn, profilesCtrl.show)
+router.get('/:profileId', isLoggedIn, profilesCtrl.show)
 
-router.get('/:postId/edit', isLoggedIn, profilesCtrl.edit)
+router.get('/:profileId/edit', isLoggedIn, profilesCtrl.edit)
 
-router.put('/:postId', isLoggedIn, profilesCtrl.update)
+router.put('/:profileId', isLoggedIn, profilesCtrl.update)
 
 export {
   router

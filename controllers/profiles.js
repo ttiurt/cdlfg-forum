@@ -15,7 +15,7 @@ function index(req, res) {
 }
 
 function show(req, res) {
-  Profile.findById(req.params.postId)
+  Profile.findById(req.params.profileId)
   .then(profile => {
     const isSelf = profile._id.equals(req.user.profile._id)
     res.render("profiles/show", {
@@ -31,7 +31,7 @@ function show(req, res) {
 }
 
 function edit(req, res){
-  Profile.findById(req.params.postId)
+  Profile.findById(req.params.profileId)
   .then(profile => {
     res.render('profiles/edit', {
       profile,
@@ -46,7 +46,7 @@ function edit(req, res){
 
 function update(req, res){
   console.log(req.body)
-  Profile.findById(req.params.postId)
+  Profile.findById(req.params.profileId)
   .then(profile => {
     if (profile._id.equals(req.user.profile._id)){
       profile.updateOne(req.body)
