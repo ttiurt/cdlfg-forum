@@ -6,9 +6,9 @@
 ![alt text](/public/rm-pics/Screenshot%202023-04-28%20at%204.13.27%20AM.png)
 ![alt text](/public/rm-pics/Screenshot%202023-04-28%20at%204.14.07%20AM.png)
 
-## A LINK TO YOUR DREAM TEAM: https://cdlfg.fly.dev/home
+## A LINK TO YOUR DREAM TEAM: <a href="https://cdlfg.fly.dev/home">HERE</a>
 
-## A LINK TO MY TRELLO BOARD: https://trello.com/b/A96ARaIs/ranked-play-lfg-planning-board
+## A LINK TO MY <a href="https://trello.com/b/A96ARaIs/ranked-play-lfg-planning-board">TRELLO BOARD</a>
 
 ### ABOUT:
 
@@ -38,17 +38,17 @@ This is a simple forum for easily finding a team to help you grind through the r
 
 ### RESOURCES:
 
-https://www.figma.com/?fuid=
+<a href="https://www.figma.com/?fuid=">FIGMA</a>
 
-https://github.com/ttiurt
+<a href="https://github.com/ttiurt">GITHUB</a>
 
-https://typewolf.com
+<a href="https://typewolf.com">TYPEWOLF</a>
 
-https://icons8.com
+<a href="https://icons8.com">ICONS8</a>
 
-https://trello.com
+<a href="https://trello.com/b/A96ARaIs/ranked-play-lfg-planning-board">TRELLO</a>
 
-https://whimsical.com
+<a href="https://whimsical.com">WHIMSICAL</a>
 
 ### INSPO:
 
