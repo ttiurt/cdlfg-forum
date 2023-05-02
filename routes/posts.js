@@ -22,8 +22,6 @@ router.delete('/:postId', isLoggedIn, postsCtrl.delete)
 
 //LFG REPLIES
 
-router.get('/:postId', postsCtrl.show)
-
 router.get('/:postId/comments/:commentId/edit', isLoggedIn, postsCtrl.editComment)
 
 router.post('/:postId/comments', isLoggedIn, postsCtrl.addComment)

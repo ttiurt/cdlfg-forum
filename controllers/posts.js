@@ -134,7 +134,7 @@ function editComment(req, res){
   .then(post => {
     const comment = post.comments.id(req.params.commentId)
     if (comment.responder.equals(req.user.profile._id)){
-      res.render('posts/editComment', {
+      res.render('posts/edit-comment', {
         post,
         comment,
         title: 'UPDATE COMMENT'

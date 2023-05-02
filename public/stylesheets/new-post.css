@@ -1,3 +1,18 @@
+@font-face {
+  font-family: Syne;
+  src: url(/fonts/Syne[wght].ttf);
+}
+@font-face {
+  font-family: SpaceMono;
+  src: url(/fonts/SpaceMono-Bold.ttf);
+}
+
+@font-face {
+  font-family: Raleway;
+  src: url(/fonts/Raleway[wght].ttf);
+}
+
+
 .container {  
   margin-top: 85px;
   height: 100%;

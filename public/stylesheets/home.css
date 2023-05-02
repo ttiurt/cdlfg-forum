@@ -1,6 +1,6 @@
 @font-face {
   font-family: Syne;
-  src: url(syne.ttf);
+  src: url(Syne[wght].ttf);
 }
 @font-face {
   font-family: SpaceMono;
@@ -8,7 +8,7 @@
 }
 
 @font-face {
-  font-family: raleway;
+  font-family: Raleway;
   src: url(/fonts/Raleway[wght].ttf);
 }
 
@@ -116,7 +116,7 @@
 
 .slogan { 
   grid-area: slogan;
-  font-family: syne;
+  font-family: Syne;
   font-size: 3.9vw;
   text-align: right;
   margin-right: 4.5vw;
@@ -124,7 +124,7 @@
 
 .login { 
   grid-area: login;
-  font-family: syne;
+  font-family: Syne;
   font-size: 4.5vw;
   justify-self: right;
   align-self: start;
@@ -134,7 +134,7 @@
 
 .filledcomplete { 
   grid-area: filledcomplete;
-  font-family: syne;
+  font-family: Syne;
   font-size: 3.5vw;
   text-align: left;
   margin-left: 2vw;
@@ -143,7 +143,7 @@
 
 .aidhelp { 
   grid-area: aidhelp;
-  font-family: syne;
+  font-family: Syne;
   font-size: 3vw;
   text-align: right;
   margin-right: 2vw;

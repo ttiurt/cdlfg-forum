@@ -1,3 +1,18 @@
+@font-face {
+  font-family: Syne;
+  src: url(/fonts/Syne[wght].ttf);
+}
+@font-face {
+  font-family: SpaceMono;
+  src: url(/fonts/SpaceMono-Bold.ttf);
+}
+
+@font-face {
+  font-family: Raleway;
+  src: url(/fonts/Raleway[wght].ttf);
+}
+
+
 html {
   box-sizing: border-box;
   background: rgb(30,30,30);
@@ -84,7 +99,7 @@ nav > i {
 .pages {
   display: inline-block;
   padding: 0.5em 17px;
-  color: rgba(0, 0, 0, 0.5);
+  color: #f6f6f680;
   position: relative;
   letter-spacing: 1px;
   text-decoration: none;

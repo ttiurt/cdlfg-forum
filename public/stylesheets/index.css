@@ -1,6 +1,6 @@
 @font-face {
   font-family: Syne;
-  src: url(/fonts/Syne.ttf);
+  src: url(/fonts/Syne[wght].ttf);
 }
 @font-face {
   font-family: SpaceMono;
@@ -8,8 +8,8 @@
 }
 
 @font-face {
-  font-family: raleway;
-  src: url(/fonts/Raleway.ttf);
+  font-family: Raleway;
+  src: url(/fonts/Raleway[wght].ttf);
 }
 
 
@@ -29,7 +29,7 @@
 }
 
 .container {  
-  font-family: syne;
+  font-family: Syne;
   display: grid;
   height: 100%;
   background: rgb(30,30,30);
